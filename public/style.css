@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('/oe-background.png'); /* User will place this at the root */
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden; /* To prevent scrollbars if content overflows slightly */
+}
+
+#qr-container img {
+    display: block;
+    width: 150px; /* Adjust as needed */
+    height: 150px; /* Adjust as needed */
+}
+
+:root {
+  --gap-header:16px;
+  --gap-footer:165px;
+  --pad-x:30px;
+  --pad-y:0px;
+}
+
+.wrapper {
+  display:flex;
+  flex-direction:column;
+  gap:0;
+}
+
+.section {
+  padding:var(--pad-y) var(--pad-x);
+  margin:0;
+}
+
+.header { 
+    margin-top: 130px;
+    margin-bottom:var(--gap-header);
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 20px; /* Adjust as needed */
+    color: #ffffff;
+    text-align: left;
+    max-width: 90%;
+    word-wrap: break-word;
+}
+
+.qr {
+    margin-top: 120px;
+    margin-bottom:var(--gap-footer);
+    margin-left: 100px;
+}
+
+.footer {
+    font-weight: bolder;
+    font-size: 20px; /* Adjust as needed */
+    color: #19015a;
+    text-align: left;
+    max-width: 90%;
+    word-wrap: break-word;
+}
+
+@media (min-width:600px) {
+  .wrapper{ flex-direction:row; }
+
+  .header{ margin:0 var(--gap-header) 0 0; }
+  .qr    { margin:0 var(--gap-footer) 0 0; }
+}

@@ -1,0 +1,14 @@
+# wrangler.toml
+name = 'octopus-energy-qrcode'
+main = "src/worker.js"
+compatibility_date = "2023-10-30" # Use a recent compatibility date
+
+# Binding for KV store for static assets.
+# IMPORTANT: You must create a KV namespace in your Cloudflare dashboard
+# and get its ID. Replace "YOUR_KV_NAMESPACE_ID_HERE" with the actual ID.
+# For local development with `wrangler dev --local`, you might not need the preview_id,
+# but it's good for `wrangler dev` (non-local) and deployments.
+[[kv_namespaces]]
+binding = "STATIC_ASSETS_KV"
+id = "4043ab35ce17463092680356c7ef091f"
+# preview_id = "YOUR_KV_NAMESPACE_ID_FOR_PREVIEW_HERE" # Often the same as id
