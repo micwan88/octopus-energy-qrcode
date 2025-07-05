@@ -43,7 +43,7 @@ export default {
           },
         });
 
-      const response = new Response(html, {
+      const response = new Response(html.body, {
           headers: {
             'Content-Type': 'text/html;charset=UTF-8',
             'Cache-Control': 'no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0',
